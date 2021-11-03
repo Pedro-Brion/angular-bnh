@@ -1,0 +1,9 @@
+<div *ngIf="student">
+  Student: <a (click)="clickHandler()">{{student?.name}}</a> <br/>
+  <textarea #description></textarea>
+  <p *ngIf="student?.isHero">
+    Class: {{student?.class}}
+  </p>
+  <p *ngIf="!student.isHero"> It's not a student</p>
+  <button (click)="hidd(description)">Hide!</button>
+</div>
